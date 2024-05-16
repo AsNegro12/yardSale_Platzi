@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/*
+
+  Con este reset vamos a resolver:
+    👉 Unificar el uso de Custom Properties
+    👉 Problemas de box-model más generales
+    👉 Problemas con imagenes, vídeos e iconos svg
+    👉 Problemas con tipografías y etiquetas input en formularios
+    👉 Unificar la tipografía de todas las etiquetas de una web
+
+*/
+
+/*Aquí definios las Custom porperties */
+
+:root {
+
+  --color-primario   : #181818;
+  --color-secundario : #f0f0f0;
+
+  /* Tipografía */
+  --Tipo-principal  : Helvetica, Arial, sans-serif;
+  --Tipo-secundario : Verdana;
+}
+
+/* Las adaptaciones al modo oscuro */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primario   : #f0f0f0;
+    --color-secundario : #181818;
+  }
+}
+
+/* Opcional */
+/* Configuraciones si un usuario activa el modo de alto constraste */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primario   : black;
+    --color-secundario : white;
+  }
+}
+
+/* Opcional */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animations*/
+/* @media (prefers-reduced-motion: reduce) {
+  Aquí en vez de pones el * de vemos pornes el selector especifico
+  * {
+    animation: none;
+    transition: none;
+  }
+} */
+
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional object-fit: cover;*/
+  /* opcional object-position: center center; */
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+}
+
+/* ... excepto los que se encuentran en párardos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los punto de los <li> */
+li {
+  list-style-type: none;
+  
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defectos de las pricipales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudo-elementos de quotes */
+blockquote::before, blockquote:after, q::before q::after {
+  content: '';
+  content: none;
+
+}
+
+/* Configuramos el texto que seleccionamos */
+::selection {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+}
+
+/* Nivelamos problemas de tipografías y colocación de  formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  /* -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; */
+}
+
+/* Reteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas  con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--Tipo-principal);
+  color: var(--color-primario);
+  background-color: var(--color-secundario);
+  /* opcional esto puede variar*/ line-height: 1.4em;
+  /* opciona  hyphens: auto;*/ 
+   /* opcional */
+   -webkit-hyphens: auto;
+   -ms-hyphens: auto;
+       hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
