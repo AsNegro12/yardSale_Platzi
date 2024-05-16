@@ -20,6 +20,11 @@
   --text-input-fileld: #f7f7f7;
   --hospital-gree: #acd9b2;
 
+  /* medidas de los textos usados en el proyecto */
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+
 }
 
 /* Las adaptaciones al modo oscuro */
