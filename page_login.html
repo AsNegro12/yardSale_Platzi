@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/ResetCSS.css">
+    <link rel="stylesheet" href="Style/page_login.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Yard Sale</title>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="./assets/logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+            <form action="/" class="form">
+                <label for="email" class="label">Email Address</label>
+                <input type="email" id="email" placeholder="exemple@email.com" class="input input-email">
+
+                <label for="newPassword" class="label">Password</label>
+                <input type="password" id="newPassword" placeholder="********" class="input input-password">
+
+                <input type="submit" value="Log in " class="primary-button login-button">
+            </form>
+
+            <p class="resend">
+                <span>Didn't receive the email?</span>
+                <a href="/">Resend</a>
+            </p>
+
+            <input type="submit" value="Sign in" class="primary-button login-button">
+        </div>
+    </div>
+</body>
+</html>
