@@ -13,13 +13,13 @@
 /*Aquí definios las Custom porperties */
 
 :root {
+  /* colores primarios */
+  --color-primario : #000000;
+  --color-secundario : #ffffff;
+  --very-light-pink: #c7c7c7;
+  --text-input-fileld: #f7f7f7;
+  --hospital-gree: #acd9b2;
 
-  --color-primario   : #181818;
-  --color-secundario : #f0f0f0;
-
-  /* Tipografía */
-  --Tipo-principal  : Helvetica, Arial, sans-serif;
-  --Tipo-secundario : Verdana;
 }
 
 /* Las adaptaciones al modo oscuro */
@@ -53,7 +53,8 @@
 
 /* Reseteamos los margin y paddings de todas las etiquetas */
 
-* {
+*{
+  font-family: "Quicksand", sans-serif;
   margin: 0;
   padding: 0;
   border: 0;
