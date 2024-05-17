@@ -14,11 +14,11 @@
 
 :root {
   /* colores primarios */
-  --color-primario : #000000;
-  --color-secundario : #ffffff;
+  --color-primario : #181818;
+  --color-secundario : #f0f0f0;
   --very-light-pink: #c7c7c7;
   --text-input-field: #f7f7f7;
-  --hospital-gree: #acd9b2;
+  --hospital-green: #acd9b2;
 
   /* medidas de los textos usados en el proyecto */
   --sm: 14px; /*small*/
