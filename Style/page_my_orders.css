@@ -52,7 +52,7 @@
 }
 
  @media (max-width: 680px) {
-    .my-order-container {
+    .my-orders-container {
         width: 300px;
     }
  }
