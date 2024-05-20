@@ -33,6 +33,7 @@
   :root {
     --color-primario   : #f0f0f0;
     --color-secundario : #181818;
+    --text-input-field: #363636;
   }
 }
 
