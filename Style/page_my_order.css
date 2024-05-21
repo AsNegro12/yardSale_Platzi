@@ -79,7 +79,7 @@
     font-weight: bold;
 }
 
- @media (max-width: 680px) {
+ @media (max-width: 640px) {
     .my-order-container {
         width: 300px;
     }
